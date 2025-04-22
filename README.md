@@ -2,6 +2,11 @@
 
 A secure reverse shell application with authentication and encrypted communication.
 
+# Group Members
+1. Anass Anhari
+2. Pol Vidal Miranda
+3. Eric Muthomi Gitonga
+
 ## Description
 
 This project implements a secure reverse shell system with the following features:
