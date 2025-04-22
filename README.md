@@ -92,3 +92,36 @@ cd src
 chmod +x start_server.sh
 ./start_server.sh
 ```
+
+## Default Credentials
+
+The system creates a default admin user on first run:
+- Username: `admin`
+- Password: `secure_admin_pwd_MERIT2025`
+
+It's recommended to change this password after first login.
+
+## Troubleshooting
+
+### File Not Found Errors
+If you encounter errors related to missing directories or files (like auth.json):
+```
+FileNotFoundError: [Errno 2] No such file or directory: './auth/auth.json'
+```
+
+Create the necessary directories manually:
+```bash
+mkdir -p src/auth
+mkdir -p src/certs
+```
+
+### Certificate Errors
+If you encounter SSL certificate errors, delete existing certificates and regenerate them:
+```bash
+rm -rf src/certs/
+python src/generate_cert.py
+```
+
+## License
+
+See the LICENSE file for details.
